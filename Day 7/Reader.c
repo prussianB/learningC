@@ -18,7 +18,12 @@ void close(){
 }
 
 int read(){
-	//fgets string. Gelen önce ! kontrol et. String compare,   2 islem string to int
+	if (feof(fData)) {
+		val = -1;
+	}
+	
+	//fgets string. Gelen Ã¶nce ! kontrol et. String compare,   2 islem string to int
+	
 	fgets(val1, 5, fData);
 	if (val1 == '!') {
 		val = -2;
@@ -26,8 +31,8 @@ int read(){
 	return val;
 }
 
-	//Dosya biterse -1 dön.
-	// ! gelirse -2 dön.
+	//Dosya biterse -1 dÃ¶n.
+	// ! gelirse -2 dÃ¶n.
 
 void write(int val1, int val2 ){
 	val2 = val1 * 2;
@@ -45,8 +50,11 @@ void write(int val1, int val2 ){
 
 int main(){
 	initialize();
-	while (!feof(fData)) {
+	while (true) {
 		read();
+		if (val == -1){
+			break;
+		}
 		if (val == -2){
 			continue;
 		}
