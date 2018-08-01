@@ -8,8 +8,7 @@ FILE * fDataW;
 void initialize(){
 
 	fDataR = fopen("monitorData.txt", "r");
-	fDataW = fopen("
-		writeData.txt", "w");
+	fDataW = fopen("writeData.txt", "w");
 	return;
 }
 
