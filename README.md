@@ -1,4 +1,4 @@
-# learningC
+# learning C & C++
 My tutorial codes while learning c.
 I'm learning mmostly from newboston Youtube channel. You should check it out too
 
